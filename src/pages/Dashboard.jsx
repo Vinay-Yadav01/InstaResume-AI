@@ -1,4 +1,5 @@
 import AddResume from "@/components/custom/AddResume";
+import AllResume from "@/components/custom/AllResume";
 import React from "react";
 
 function Dashboard() {
@@ -10,6 +11,7 @@ function Dashboard() {
       </p>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-10">
         <AddResume />
+        <AllResume />
       </div>
     </div>
   );

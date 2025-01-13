@@ -15,12 +15,16 @@ import { Input } from "@/components/ui/input";
 import { v4 as uuidv4 } from "uuid";
 import { CreateNewResume } from "../../../services/globalAPI.js";
 import { useUser } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
 
 function AddResume() {
   const [openDialog, setopenDialog] = useState(false);
   const [resumeTitle, setresumeTitle] = useState("");
   const { user } = useUser();
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
+
   const onCreate = () => {
     setLoading(true);
     const uuid = uuidv4();
@@ -33,8 +37,8 @@ function AddResume() {
       },
     };
     CreateNewResume(data).then((res) => {
-      console.log(res);
       setLoading(false);
+      navigate("/dashboard/resume/" + res.data.documentId + "/edit");
     }),
       (error) => {
         setLoading(false);

@@ -13,6 +13,7 @@ dist-ssr
 *.local
 .env*.local
 .env
+ai-resume-maker-admin/*
 
 # Editor directories and files
 .vscode/*

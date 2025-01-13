@@ -19,9 +19,9 @@ const CreateNewResume = async ({ data }) => {
   }
 };
 
-const GetResumes = async () => {
+const GetResumes = async (userEmail) => {
   try {
-    const response = await axiosClient.get("user-resumes");
+    const response = await axiosClient.get("/user-resumes?filters[userEmail[$eq]="+userEmail);
     return response.data;
   } catch (error) {
     console.error(error);
