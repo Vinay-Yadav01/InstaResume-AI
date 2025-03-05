@@ -21,11 +21,31 @@ const CreateNewResume = async ({ data }) => {
 
 const GetResumes = async (userEmail) => {
   try {
-    const response = await axiosClient.get("/user-resumes?filters[userEmail[$eq]="+userEmail);
+    const response = await axiosClient.get(
+      "/user-resumes?filters[userEmail[$eq]=" + userEmail
+    );
     return response.data;
   } catch (error) {
     console.error(error);
   }
 };
 
-export { CreateNewResume, GetResumes };
+const UpdateResumeDetail = async (id, data) => {
+  try {
+    const response = await axiosClient.put(`/user-resumes/${id}`, data);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const GetResumeById = async (id) => {
+  try {
+    const response = await axiosClient.get(`/user-resumes/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export { CreateNewResume, GetResumes, UpdateResumeDetail, GetResumeById };

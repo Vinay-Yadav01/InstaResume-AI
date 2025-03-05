@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_experience_experiences",
+  "info": {
+    "displayName": "Experience",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "worksummary": {
+      "type": "text"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "companyName": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "currentlyWorking": {
+      "type": "boolean"
+    }
+  }
+}

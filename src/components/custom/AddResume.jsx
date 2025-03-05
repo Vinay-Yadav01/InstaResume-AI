@@ -13,7 +13,7 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "@/components/ui/input";
 import { v4 as uuidv4 } from "uuid";
-import { CreateNewResume } from "../../../services/globalAPI.js";
+import { CreateNewResume } from "../../../services/globalAPI";
 import { useUser } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
 
@@ -57,7 +57,7 @@ function AddResume() {
           <DialogHeader>
             <DialogTitle>Create New Resume</DialogTitle>
             <DialogDescription>
-              Add a title for new resume
+              <p>Add a title for new resume</p>
               <Input
                 className="my-3 font-semibold text-black text-lg"
                 placeholder="Ex. Full Stack Resume"

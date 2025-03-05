@@ -17,7 +17,7 @@ function Header() {
         </Link>
         <Link to="/">
           <img
-            src="./logo2_enhanced.png"
+            src={import.meta.env.VITE_IMG2_PATH}
             alt="banner"
             className="h-full hidden max-[500px]:block"
           />
