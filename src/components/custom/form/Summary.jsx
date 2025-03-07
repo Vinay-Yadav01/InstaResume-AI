@@ -8,8 +8,18 @@ import { Brain, LoaderCircle } from "lucide-react";
 import { toast } from "sonner";
 import { AIChatSession } from "../../../../services/aiModal";
 
-const prompt =
-  "Job Title: {jobTitle} , Depends on job title give me list of  summary for 3 experience level, Mid Level and Freasher level in 3 -4 lines in array format, With summary and experience_level Field in JSON Format";
+const prompt = `Job Title: {jobTitle} , Depends on job title give me list of  summary for 3 experience level, Mid Level and Freasher level in 3 -4 lines in array format, With summary and experience_level Field in JSON Format as follows (3) [{…}, {…}, {…}]
+0
+: 
+{summary: '', experience_level: 'Senior'}
+1
+: 
+{summary: '', experience_level: 'Mid'}
+2
+: 
+{summary: '.', experience_level: 'Fresher'}
+length : 3
+`;
 function Summary({ enabledNext }) {
   const { resumeInfo, setResumeInfo } = useContext(ResumeInfoContext);
   const [summary, setSummary] = useState();

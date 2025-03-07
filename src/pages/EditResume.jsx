@@ -10,13 +10,14 @@ function EditResume() {
   const { resumeId } = useParams();
   const [resumeInfo, setResumeInfo] = useState();
   useEffect(() => {
-    setResumeInfo(dummy);
+    // setResumeInfo(dummy);
     GetResumeInfo();
   }, []);
 
   const GetResumeInfo = () => {
     GetResumeById(resumeId).then((res) => {
       console.log(res.data);
+      setResumeInfo(res.data);
     });
   };
   return (

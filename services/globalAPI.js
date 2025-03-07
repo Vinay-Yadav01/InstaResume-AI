@@ -41,11 +41,26 @@ const UpdateResumeDetail = async (id, data) => {
 
 const GetResumeById = async (id) => {
   try {
-    const response = await axiosClient.get(`/user-resumes/${id}`);
+    const response = await axiosClient.get(`/user-resumes/${id}?populate=*`);
     return response.data;
   } catch (error) {
     console.error(error);
   }
 };
 
-export { CreateNewResume, GetResumes, UpdateResumeDetail, GetResumeById };
+const DeleteResumeById = async (id) => {
+  try {
+    const response = await axiosClient.delete(`/user-resumes/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export {
+  CreateNewResume,
+  GetResumes,
+  UpdateResumeDetail,
+  GetResumeById,
+  DeleteResumeById,
+};
