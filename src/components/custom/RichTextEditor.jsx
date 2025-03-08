@@ -42,7 +42,12 @@ function RichTextEditor({ onRichTextEditorChange, index, defaultValue }) {
       const result = await AIChatSession.sendMessage(prompt);
       console.log(result.response.text());
       const resp = result.response.text();
-      setValue(resp.replace(`{"experience_points": [`, "").replace("]}", ""));
+      setValue(
+        resp
+          .replace(`{"experience_points": [`, "")
+          .replace("]}", "")
+          .replace(`", "`, "")
+      );
 
       toast.success("AI content generated successfully");
     } catch (error) {
@@ -86,6 +91,9 @@ function RichTextEditor({ onRichTextEditorChange, index, defaultValue }) {
             <BtnItalic />
             <BtnUnderline />
             <BtnStrikeThrough />
+            <BtnBulletList />
+            <BtnClearFormatting />
+            <BtnNumberedList />
             <Separator />
             <Separator />
             <BtnLink />
