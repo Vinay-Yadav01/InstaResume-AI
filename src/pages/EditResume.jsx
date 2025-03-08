@@ -1,6 +1,6 @@
 import FormSection from "@/components/custom/FormSection";
 import ResumePreview from "@/components/custom/ResumePreview";
-import { ResumeInfoContext } from "@/context/ResumeInfocontext";
+import { ResumeInfoContext } from "@/context/ResumeInfoContext";
 import dummy from "@/data/dummy";
 import React, { useEffect, useState } from "react";
 import { GetResumeById } from "../../services/globalAPI";
