@@ -121,6 +121,7 @@ function ResumeCardItem({ resume, refreshData }) {
               <AlertDialogCancel
                 onClick={() => {
                   setOpenAlert(false);
+                  
                 }}
               >
                 Cancel
