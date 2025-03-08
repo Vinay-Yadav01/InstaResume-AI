@@ -10,7 +10,7 @@ import { UpdateResumeDetail } from "../../../../services/globalAPI";
 import { useParams } from "react-router-dom";
 import { toast } from "sonner";
 
-function Skills({enabledNext}) {
+function Skills({ enabledNext }) {
   const [skillsList, setSkillsList] = useState([
     {
       name: "",
@@ -81,7 +81,10 @@ function Skills({enabledNext}) {
 
       <div>
         {skillsList.map((item, index) => (
-          <div key={index} className="flex justify-between mb-2 border rounded-lg p-3 ">
+          <div
+            key={index}
+            className="flex justify-between mb-2 border rounded-lg p-3 "
+          >
             <div>
               <label className="text-xs">Name</label>
               <Input

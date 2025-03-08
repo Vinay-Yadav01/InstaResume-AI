@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ResumeInfoContext } from "@/context/ResumeInfocontext";
+import { ResumeInfoContext } from "@/context/ResumeInfoContext";
 import PersonalDetailPreview from "./preview/PersonalDetailPreview";
 import SummaryPreview from "./preview/SummaryPreview";
 import ExperiencePreview from "./preview/ExperiencePreview";
