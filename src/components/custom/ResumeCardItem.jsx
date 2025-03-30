@@ -1,5 +1,5 @@
 import { Loader2Icon, MoreVertical, Notebook } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   DropdownMenu,
@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { DeleteResumeById } from "../../../services/globalAPI";
 import { toast } from "sonner";
+import { use } from "react";
 
 function ResumeCardItem({ resume, refreshData }) {
   const navigation = useNavigate();
@@ -46,6 +47,7 @@ function ResumeCardItem({ resume, refreshData }) {
       }
     );
   };
+
   return (
     <div className="">
       <Link to={"/dashboard/resume/" + resume.documentId + "/edit"}>
@@ -121,7 +123,6 @@ function ResumeCardItem({ resume, refreshData }) {
               <AlertDialogCancel
                 onClick={() => {
                   setOpenAlert(false);
-                  
                 }}
               >
                 Cancel
