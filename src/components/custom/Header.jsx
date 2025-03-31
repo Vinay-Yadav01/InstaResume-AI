@@ -23,7 +23,9 @@ function Header() {
         <Link to="/">
           <img src="./logo.svg" alt="logo" />
         </Link>
-        <h1 className="text-lg space-grotesk-700 text-primary">InstaResume AI</h1>
+        <h1 className="text-lg space-grotesk-700 text-primary">
+          InstaResume AI
+        </h1>
       </div>
       <div className="flex items-center justify-between gap-3 h-full">
         <NavigationMenu>
@@ -61,13 +63,11 @@ function Header() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* <ModeToggle /> */}
+        <ModeToggle />
         {isSignedIn ? (
           <div className="flex items-center h-full w-max gap-5">
             <Link to="/dashboard">
-              <Button className="font-medium  inter text-md">
-                Dashboard
-              </Button>
+              <Button className="font-medium  inter text-md">Dashboard</Button>
             </Link>
             <UserButton />
           </div>
