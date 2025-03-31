@@ -21,11 +21,13 @@ function Header() {
     <div className="flex items-center justify-between text-white p-4 px-8 h-[70px] mx-10 ">
       <div className="h-full flex items-center justify-center gap-2">
         <Link to="/">
-          <img src="./logo.svg" alt="logo" />
+          <img src={import.meta.env.VITE_IMG_PATH} alt="logo" />
         </Link>
-        <h1 className="text-lg space-grotesk-700 text-primary">
-          InstaResume AI
-        </h1>
+        <Link to="/">
+          <h1 className="text-lg space-grotesk-700 text-primary">
+            InstaResume AI
+          </h1>
+        </Link>
       </div>
       <div className="flex items-center justify-between gap-3 h-full">
         <NavigationMenu>
